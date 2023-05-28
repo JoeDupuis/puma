@@ -7,7 +7,7 @@ gem "rake-compiler", "~> 1.1.1"
 
 gem "json", "~> 2.3"
 gem "nio4r", "~> 2.0"
-gem "rack", ">= 1.6.13"
+gem "rack", ">= 1.6.13", "<3.0.0"
 gem "minitest", "~> 5.11"
 gem "minitest-retry"
 gem "minitest-proveit"

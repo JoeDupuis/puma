@@ -14,6 +14,11 @@ require 'puma/puma_http11'
 require 'puma/detect'
 require 'puma/json_serialization'
 
+require 'rack'
+if Gem::Version.new(Rack.release) >= Gem::Version.new("3.0.0")
+  raise StandardError.new "Puma 5 is not compatible with rack 3, please upgrade to Puma 6 or higher."
+end
+
 module Puma
   autoload :Const, 'puma/const'
   autoload :Server, 'puma/server'
